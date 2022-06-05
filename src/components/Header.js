@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 import { selectItems } from "../slices/basketSlice";
 
 function Header() {
-  const { data: session } = useSession()
+  const { data: session } = useSession();
   const router = useRouter();
   const items = useSelector(selectItems);
 
@@ -43,7 +43,7 @@ function Header() {
             <p className="font-extrabold md:text-sm">Account & Lists</p>
           </div>
 
-          <div className="link">
+          <div onClick={ () => router.push('/orders') }className="cursor-pointer link">
             <p>Returns</p>
             <p className="font-extrabold md:text-sm">& Orders</p>
           </div>
