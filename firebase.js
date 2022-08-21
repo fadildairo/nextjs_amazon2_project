@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 //Saw format on Stackoverflow
-import firebase from 'firebase';
+import firebase from './firebase';
 //import 'firebase/compat/firestore';
 // TODO:Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -20,6 +20,6 @@ const app = !firebase.apps.length
   ? firebase.initializeApp(firebaseConfig)
   : firebase.app();
 
-const db = app.firestore();
+export const db = app.firestore();
 
-export default db;
+ 

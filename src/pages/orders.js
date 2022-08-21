@@ -1,7 +1,7 @@
 import { useSession, getSession } from "next-auth/react";
 import Header from "../components/Header";
 import moment from "moment";
-import db from "../../firebase";
+//import {db} from "../../firebase.js";
 import Order from "../components/Order";
 
 function Orders({ orders }) {
@@ -53,12 +53,12 @@ export async function getServerSideProps(context) {
     }
 
     // Firebase db
-    const stripeOrders = await db
-        .collection("users")
-        .doc(session.user.email)
-        .collection("orders")
-        .orderBy("timestamp", "desc")
-        .get();
+    // const stripeOrders = await db
+    //     .collection("users")
+    //     .doc(session.user.email)
+    //     .collection("orders")
+    //     .orderBy("timestamp", "desc")
+    //     .get();
 
     // Stripe db
     const orders = await Promise.all(
