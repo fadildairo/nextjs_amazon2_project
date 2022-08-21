@@ -1,4 +1,6 @@
 // Initialize application
+<script src="https://cdn.auth0.com/js/auth0/9.11/auth0.min.js"></script>
+
 var webAuth = new auth0.WebAuth({
     domain:       'YOUR_DOMAIN',
     clientID:     process.env.CLIENT_ID

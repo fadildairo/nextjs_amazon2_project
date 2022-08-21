@@ -1,3 +1,6 @@
+<script src="https://cdn.auth0.com/js/auth0/9.11/auth0.min.js"></script>
+
+
 // Initialize application
 var webAuth = new auth0.WebAuth({
     domain:       'YOUR_DOMAIN',
