@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import EmailProvider from "next-auth/providers/email";
 import GoogleProvider from "next-auth/providers/google";
-//import Auth0Provider from "next-auth/providers/auth0";
+import Auth0Provider from "next-auth/providers/auth0";
 
 export default NextAuth({
   // Configure one or more authentication providers
@@ -10,9 +10,10 @@ export default NextAuth({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET
     }),
-    EmailProvider({
-      server: process.env.MAIL_SERVER,
-      from: 'NextAuth.js Amazon Passwordless'
+    Auth0Provider({
+      clientId: process.env.CLIENT_ID,
+      clientSecret: process.env.CLIENT_SECRET,
+      issuer: process.env.AUTH0_ISSUER
     }),
   ]
 })
