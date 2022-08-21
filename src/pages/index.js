@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Banner from "../components/Banner"
 import ProductFeed from "../components/ProductFeed";
+import Auth0 from "../components/Auth0";
 import { getSession } from "next-auth/react";
 
 export default function Home({ products }) {
@@ -12,6 +13,7 @@ export default function Home({ products }) {
       </Head>
 
       <Header />
+      <Auth0 />
 
       <main className="max-w-screen-2xl mx-auto">
        <Banner />
