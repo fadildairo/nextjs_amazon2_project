@@ -1,7 +1,7 @@
 import { useSession, getSession } from "next-auth/react";
 import Header from "../components/Header";
 import moment from "moment";
-import db from "../../firebase";
+import {db} from "../../firebase.js";
 import Order from "../components/Order";
 
 function Orders({ orders }) {
